@@ -74,6 +74,8 @@ EnvironmentFile=/etc/sysconfig/watchlog
 ExecStart=/opt/watchlog.sh $WORD $LOG
 ```
   
+Конфигурационные файлы юнитов необходимо разметить /usr/lib/systemd/system/  
+  
 Теперь достаточно запустить timer:
 ```systemctl start watchlog.timer```
   
