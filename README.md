@@ -80,6 +80,6 @@ ExecStart=/opt/watchlog.sh $WORD $LOG
 И убедиться в результате:
 ```tail -f /var/log/messages```
   
-Результат будет выглядить следующим образом:
+Результат будет выглядить следующим образом:  
 <img src="images/tail.jpeg" width=450 alt="input tail">
 
