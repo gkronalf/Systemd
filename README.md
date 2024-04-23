@@ -82,4 +82,9 @@ ExecStart=/opt/watchlog.sh $WORD $LOG
   
 Результат будет выглядить следующим образом:  
 <img src="images/tail.jpeg" width=450 alt="input tail">
+  
+Для автоматизированной настройки достаточно запустить стенд командой ```vagrant up```  
+и после запуска стенда выполнить ```ansible-playbook ./ansible/playbook.yaml -i ./ansible/hosts.ini```  
+Войти на тестову виртальную машину можно с помощью команды ```vagrant ssh default ``` после чего выполнить запуск таймера утилиту tail, команды которые были описаны выше.
+  
 
