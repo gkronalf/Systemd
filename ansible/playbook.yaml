@@ -1,0 +1,15 @@
+---
+
+- name: Create systemd units
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Create /etc/sysconfig/watchlog
+    copy:
+      src: templates/watchlog
+      dest: /etc/sysconfig/watchlog
+      owner: root
+      group: root
+      mode: 0744
+      follow: yes
