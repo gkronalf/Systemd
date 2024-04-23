@@ -13,3 +13,56 @@
       group: root
       mode: 0744
       follow: yes
+
+  - name: Create /var/log/watchlog.log
+    copy:
+      src: templates/watchlog.log
+      dest: /var/log/watchlog.log
+      owner: root
+      group: root
+      mode: 0644
+      follow: yes
+
+  - name: Create script /opt/watchlog.sh
+    copy:
+      src: templates/watchlog.sh
+      dest: /opt/watchlog.sh
+      owner: root
+      group: root
+      mode: 0744
+      follow: yes
+
+  - name: Create Unit watchlog.service
+    copy:
+      src: templates/watchlog.service
+      dest: /usr/lib/systemd/system/watchlog.service
+      owner: vagrant
+      group: vagrant
+      mode: 0644
+      follow: yes
+
+  - name: Create Unit watchlog.timer
+    copy:
+      src: templates/watchlog.timer
+      dest: /usr/lib/systemd/system/watchlog.timer
+      owner: vagrant
+      group: vagrant
+      mode: 0644
+      follow: yes
+
+  # - name: "Install epel-release"
+  #   yum:
+  #     name:
+  #     - epel-release
+  #     state: present
+  #     update_cache: yes
+
+  # - name: "Install spawn-fcgi, php, php-climod_fcgid, httpd"
+  #   yum:
+  #     name:
+  #     - mod_fcgid.x86_64
+  #     - php
+  #     - php-climod_fcgid
+  #     - httpd
+  #     state: present
+  #     update_cache: yes

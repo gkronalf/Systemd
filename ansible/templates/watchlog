@@ -2,5 +2,5 @@
 # Place it to /etc/sysconfig
 
 # File and word in that file that we will be monit
-WORD="ALERT"
+WORD="Alert"
 LOG=/var/log/watchlog.log
