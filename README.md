@@ -28,7 +28,7 @@ LOG=/var/log/watchlog.log
 vi /opt/watchlog.sh
 ```
   
-Crhbgn имеет следующее содержание:  
+Скрипт имеет следующее содержание:  
 ```
 #!/bin/bash
 
